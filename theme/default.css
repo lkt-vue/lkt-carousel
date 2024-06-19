@@ -1,0 +1,51 @@
+:root {
+    /** Font */
+    --lkt-carousel-font-family: system-ui, Helvetica;
+    --lkt-carousel-font-size: 17px;
+    --lkt-carousel-font-weight: 400;
+    --lkt-carousel-line-height: 1;
+    --lkt-carousel-text-align: left;
+
+    /** Sizing */
+    --lkt-carousel-width: 100%;
+    --lkt-carousel-min-width: 150px;
+    --lkt-carousel-min-height: 35px;
+    --lkt-carousel-padding: 7px;
+    --lkt-carousel-gap: 5px;
+
+    /** Border */
+    --lkt-carousel-border-radius: 5px;
+    --lkt-carousel-border-width: 1px;
+    --lkt-carousel-border-style: solid;
+
+    /** Colors */
+    --lkt-carousel-color: #ffffff;
+    --lkt-carousel-bg: #007ebc;
+    --lkt-carousel-border-color: #ddd;
+
+    /** Effects */
+    --lkt-carousel-shadow: none;
+    --lkt-carousel-transition: all linear 100ms;
+
+    /** State: hover */
+    --lkt-carousel-color-hover: #ffffff;
+    --lkt-carousel-bg-hover: #007ebc;
+    --lkt-carousel-border-color-hover: #ddd;
+
+    /** State: Focus */
+    --lkt-carousel-border-color-focus: var(--focus-color);
+    --lkt-carousel-shadow-focus: 0 0 0 2px var(--focus-color);
+
+    /** State: Disabled */
+    --lkt-carousel-color-disabled: var(--disabled-contrast);
+    --lkt-carousel-bg-disabled: var(--disabled-color);
+    --lkt-carousel-border-color-disabled: var(--disabled-color);
+
+    /** Internal image */
+    --lkt-button-img-max-width: 50px;
+    --lkt-button-img-max-height: 50px;
+
+    /** Split Button */
+    --lkt-button-split-arrow-width: 40px;
+    --lkt-button-split-arrow-bg: transparent;
+}
