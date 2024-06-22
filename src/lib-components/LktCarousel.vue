@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<{
     itemsToShow?: number
     itemsToScroll?: number
     autoplay?: number
-    wrapAround?: boolean
+    infinite?: boolean
     mouseDrag?: boolean
     touchDrag?: boolean
     pauseAutoplayOnHover?: boolean
@@ -31,7 +31,7 @@ const props = withDefaults(defineProps<{
     itemsToShow: 1,
     itemsToScroll: 1,
     autoplay: 0,
-    wrapAround: false,
+    infinite: false,
     mouseDrag: true,
     touchDrag: true,
     pauseAutoplayOnHover: true,
@@ -74,7 +74,6 @@ const onResults = (r: any) => {
         if (Array.isArray(r)) items.value = r;
         loading.value = false;
         firstLoadReady.value = true;
-        console.log('onResults', items.value, loading.value);
     },
     onPerms = (r: string[]) => {
         perms.value = r;
@@ -123,7 +122,7 @@ defineExpose({
                 :items-to-show="itemsToShow"
                 :items-to-scroll="itemsToScroll"
                 :autoplay="autoplay"
-                :wrap-around="wrapAround"
+                :wrap-around="infinite"
                 :mouse-drag="mouseDrag"
                 :touch-drag="touchDrag"
                 :pause-autoplay-on-hover="pauseAutoplayOnHover"
@@ -186,27 +185,3 @@ defineExpose({
         />
 </div>
 </template>
-
-<style lang="css">
-.lkt-carousel-slide {
-    min-height: 200px;
-    width: 100%;
-    background-color: var(--vc-clr-primary);
-    color: var(--vc-clr-white);
-    font-size: 20px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.lkt-carousel-slide {
-    padding: 10px;
-}
-
-.carousel__prev,
-.carousel__next {
-    box-sizing: content-box;
-    border: 5px solid white;
-}
-</style>

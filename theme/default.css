@@ -9,18 +9,23 @@
     /** Sizing */
     --lkt-carousel-width: 100%;
     --lkt-carousel-min-width: 150px;
-    --lkt-carousel-min-height: 35px;
+    --lkt-carousel-min-height: 200px;
+    --lkt-carousel-min-height-slide: 200px;
     --lkt-carousel-padding: 7px;
+    --lkt-carousel-padding-slide: 10px;
     --lkt-carousel-gap: 5px;
 
     /** Border */
     --lkt-carousel-border-radius: 5px;
+    --lkt-carousel-border-radius-slide: 5px;
+    --lkt-carousel-border-radius-navigation: 100%;
     --lkt-carousel-border-width: 1px;
     --lkt-carousel-border-style: solid;
 
     /** Colors */
     --lkt-carousel-color: #ffffff;
     --lkt-carousel-bg: #007ebc;
+    --lkt-carousel-bg-slide: #007ebc;
     --lkt-carousel-border-color: #ddd;
 
     /** Effects */

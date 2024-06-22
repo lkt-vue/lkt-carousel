@@ -5,7 +5,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     itemsToShow?: number | undefined;
     itemsToScroll?: number | undefined;
     autoplay?: number | undefined;
-    wrapAround?: boolean | undefined;
+    infinite?: boolean | undefined;
     mouseDrag?: boolean | undefined;
     touchDrag?: boolean | undefined;
     pauseAutoplayOnHover?: boolean | undefined;
@@ -24,7 +24,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     itemsToShow: number;
     itemsToScroll: number;
     autoplay: number;
-    wrapAround: boolean;
+    infinite: boolean;
     mouseDrag: boolean;
     touchDrag: boolean;
     pauseAutoplayOnHover: boolean;
@@ -47,7 +47,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     itemsToShow?: number | undefined;
     itemsToScroll?: number | undefined;
     autoplay?: number | undefined;
-    wrapAround?: boolean | undefined;
+    infinite?: boolean | undefined;
     mouseDrag?: boolean | undefined;
     touchDrag?: boolean | undefined;
     pauseAutoplayOnHover?: boolean | undefined;
@@ -66,7 +66,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     itemsToShow: number;
     itemsToScroll: number;
     autoplay: number;
-    wrapAround: boolean;
+    infinite: boolean;
     mouseDrag: boolean;
     touchDrag: boolean;
     pauseAutoplayOnHover: boolean;
@@ -86,12 +86,12 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
     title: string;
     dir: "ltr" | "rtl";
     filters: LktObject;
+    infinite: boolean;
     resource: string;
     autoplay: number;
     modelValue: number;
     itemsToShow: number;
     itemsToScroll: number;
-    wrapAround: boolean;
     mouseDrag: boolean;
     touchDrag: boolean;
     pauseAutoplayOnHover: boolean;

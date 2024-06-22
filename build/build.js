@@ -1,4 +1,4 @@
-import { defineComponent as te, inject as g, reactive as R, ref as s, h as b, provide as M, onMounted as Ie, nextTick as De, onUnmounted as Be, computed as T, watch as se, cloneVNode as Ne, Fragment as fe, useSlots as Pe, resolveComponent as ue, openBlock as w, createElementBlock as D, unref as j, toDisplayString as ce, createCommentVNode as N, renderSlot as q, createBlock as J, normalizeClass as $e, createVNode as de, withCtx as K, renderList as Le, createElementVNode as ve, createTextVNode as Ue } from "vue";
+import { defineComponent as te, inject as g, reactive as V, ref as s, h as b, provide as M, onMounted as Ie, nextTick as De, onUnmounted as Be, computed as A, watch as se, cloneVNode as Ne, Fragment as fe, useSlots as Pe, resolveComponent as ue, openBlock as w, createElementBlock as D, unref as j, toDisplayString as ce, createCommentVNode as N, renderSlot as q, createBlock as J, normalizeClass as $e, createVNode as de, withCtx as K, renderList as Le, createElementVNode as ve, createTextVNode as Ue } from "vue";
 /**
  * Vue 3 Carousel 0.3.3
  * (c) 2024
@@ -216,7 +216,7 @@ function Ee(e = "", n = {}) {
 var Ge = te({
   name: "ARIA",
   setup() {
-    const e = g("config", R(Object.assign({}, p))), n = g("currentSlide", s(0)), t = g("slidesCount", s(0));
+    const e = g("config", V(Object.assign({}, p))), n = g("currentSlide", s(0)), t = g("slidesCount", s(0));
     return () => b("div", {
       class: ["carousel__liveregion", "carousel__sr-only"],
       "aria-live": "polite",
@@ -231,11 +231,11 @@ var Ge = te({
   props: Oe,
   setup(e, { slots: n, emit: t, expose: u }) {
     var i;
-    const r = s(null), f = s([]), v = s(0), c = s(0), o = R(Object.assign({}, p));
+    const r = s(null), f = s([]), v = s(0), c = s(0), o = V(Object.assign({}, p));
     let S = Object.assign({}, p), k;
-    const d = s((i = e.modelValue) !== null && i !== void 0 ? i : 0), y = s(0), C = s(0), A = s(0), V = s(0);
+    const d = s((i = e.modelValue) !== null && i !== void 0 ? i : 0), y = s(0), C = s(0), T = s(0), R = s(0);
     let E, H;
-    M("config", o), M("slidesCount", c), M("currentSlide", d), M("maxSlide", A), M("minSlide", V), M("slideWidth", v);
+    M("config", o), M("slidesCount", c), M("currentSlide", d), M("maxSlide", T), M("minSlide", R), M("slideWidth", v);
     function Y() {
       k = Object.assign({}, e.breakpoints), S = Object.assign(Object.assign(Object.assign({}, S), e), { i18n: Object.assign(Object.assign({}, S.i18n), e.i18n), breakpoints: void 0 }), W(S);
     }
@@ -262,10 +262,10 @@ var Ge = te({
       v.value = l.width / o.itemsToShow;
     }
     function U() {
-      c.value <= 0 || (C.value = Math.ceil((c.value - 1) / 2), A.value = Xe({ config: o, slidesCount: c.value }), V.value = ze({ config: o, slidesCount: c.value }), o.wrapAround || (d.value = pe({
+      c.value <= 0 || (C.value = Math.ceil((c.value - 1) / 2), T.value = Xe({ config: o, slidesCount: c.value }), R.value = ze({ config: o, slidesCount: c.value }), o.wrapAround || (d.value = pe({
         val: d.value,
-        max: A.value,
-        min: V.value
+        max: T.value,
+        min: R.value
       })));
     }
     Ie(() => {
@@ -276,9 +276,9 @@ var Ge = te({
       });
     });
     let a = !1;
-    const _ = { x: 0, y: 0 }, X = { x: 0, y: 0 }, L = R({ x: 0, y: 0 }), z = s(!1), x = s(!1), G = () => {
+    const _ = { x: 0, y: 0 }, X = { x: 0, y: 0 }, L = V({ x: 0, y: 0 }), z = s(!1), x = s(!1), G = () => {
       z.value = !0;
-    }, Re = () => {
+    }, Ve = () => {
       z.value = !1;
     };
     function he(l) {
@@ -311,8 +311,8 @@ var Ge = te({
     function P(l) {
       const h = o.wrapAround ? l : pe({
         val: l,
-        max: A.value,
-        min: V.value
+        max: T.value,
+        min: R.value
       });
       d.value === h || B.value || (t("slide-start", {
         slidingToIndex: l,
@@ -323,7 +323,7 @@ var Ge = te({
         if (o.wrapAround) {
           const m = ee({
             val: h,
-            max: A.value,
+            max: T.value,
             min: 0
           });
           m !== d.value && (d.value = m, t("loop", {
@@ -346,13 +346,13 @@ var Ge = te({
     }
     const ke = { slideTo: P, next: Z, prev: ne };
     M("nav", ke), M("isSliding", B);
-    const _e = T(() => He({
+    const _e = A(() => He({
       config: o,
       currentSlide: d.value,
       slidesCount: c.value
     }));
     M("slidesToScroll", _e);
-    const Ve = T(() => {
+    const Re = A(() => {
       const l = o.dir === "rtl" ? -1 : 1, h = _e.value * v.value * l;
       return {
         transform: `translateX(${L.x - h}px)`,
@@ -369,7 +369,7 @@ var Ge = te({
     }), se(() => e.modelValue, (l) => {
       l !== d.value && P(Number(l));
     }), se(c, U), t("before-init"), Y();
-    const Ae = {
+    const Te = {
       config: o,
       slidesCount: c,
       slideWidth: v,
@@ -377,8 +377,8 @@ var Ge = te({
       prev: ne,
       slideTo: P,
       currentSlide: d,
-      maxSlide: A,
-      minSlide: V,
+      maxSlide: T,
+      minSlide: R,
       middleSlide: C
     };
     u({
@@ -391,11 +391,11 @@ var Ge = te({
       next: Z,
       prev: ne,
       nav: ke,
-      data: Ae
+      data: Te
     });
-    const ae = n.default || n.slides, le = n.addons, Te = R(Ae);
+    const ae = n.default || n.slides, le = n.addons, Ae = V(Te);
     return () => {
-      const l = je(ae == null ? void 0 : ae(Te)), h = (le == null ? void 0 : le(Te)) || [];
+      const l = je(ae == null ? void 0 : ae(Ae)), h = (le == null ? void 0 : le(Ae)) || [];
       l.forEach((oe, re) => oe.props.index = re);
       let m = l;
       if (o.wrapAround) {
@@ -413,7 +413,7 @@ var Ge = te({
       f.value = l, c.value = Math.max(l.length, 1);
       const O = b("ol", {
         class: "carousel__track",
-        style: Ve.value,
+        style: Re.value,
         onMousedownCapture: o.mouseDrag ? he : null,
         onTouchstartPassiveCapture: o.touchDrag ? he : null
       }, m), Ce = b("div", { class: "carousel__viewport" }, O);
@@ -430,7 +430,7 @@ var Ge = te({
         "aria-label": o.i18n.ariaGallery,
         tabindex: "0",
         onMouseenter: G,
-        onMouseleave: Re
+        onMouseleave: Ve
       }, [Ce, h, b(Ge)]);
     };
   }
@@ -448,7 +448,7 @@ function Je(e) {
   return e in me;
 }
 const ge = (e) => {
-  const n = g("config", R(Object.assign({}, p))), t = String(e.name), u = `icon${t.charAt(0).toUpperCase() + t.slice(1)}`;
+  const n = g("config", V(Object.assign({}, p))), t = String(e.name), u = `icon${t.charAt(0).toUpperCase() + t.slice(1)}`;
   if (!t || typeof t != "string" || !Je(t))
     return;
   const i = qe[t], r = b("path", { d: i }), f = n.i18n[u] || e.title || t, v = b("title", f);
@@ -461,7 +461,7 @@ const ge = (e) => {
 };
 ge.props = { name: String, title: String };
 const Ke = (e, { slots: n, attrs: t }) => {
-  const { next: u, prev: i } = n || {}, r = g("config", R(Object.assign({}, p))), f = g("maxSlide", s(1)), v = g("minSlide", s(1)), c = g("currentSlide", s(1)), o = g("nav", {}), { dir: S, wrapAround: k, i18n: d } = r, y = S === "rtl", C = b("button", {
+  const { next: u, prev: i } = n || {}, r = g("config", V(Object.assign({}, p))), f = g("maxSlide", s(1)), v = g("minSlide", s(1)), c = g("currentSlide", s(1)), o = g("nav", {}), { dir: S, wrapAround: k, i18n: d } = r, y = S === "rtl", C = b("button", {
     type: "button",
     class: [
       "carousel__prev",
@@ -470,7 +470,7 @@ const Ke = (e, { slots: n, attrs: t }) => {
     ],
     "aria-label": d.ariaPreviousSlide,
     onClick: o.prev
-  }, (i == null ? void 0 : i()) || b(ge, { name: y ? "arrowRight" : "arrowLeft" })), A = b("button", {
+  }, (i == null ? void 0 : i()) || b(ge, { name: y ? "arrowRight" : "arrowLeft" })), T = b("button", {
     type: "button",
     class: [
       "carousel__next",
@@ -480,9 +480,9 @@ const Ke = (e, { slots: n, attrs: t }) => {
     "aria-label": d.ariaNextSlide,
     onClick: o.next
   }, (u == null ? void 0 : u()) || b(ge, { name: y ? "arrowLeft" : "arrowRight" }));
-  return [C, A];
+  return [C, T];
 }, Qe = () => {
-  const e = g("config", R(Object.assign({}, p))), n = g("maxSlide", s(1)), t = g("minSlide", s(1)), u = g("currentSlide", s(1)), i = g("nav", {}), r = (v) => ee({
+  const e = g("config", V(Object.assign({}, p))), n = g("maxSlide", s(1)), t = g("minSlide", s(1)), u = g("currentSlide", s(1)), i = g("nav", {}), r = (v) => ee({
     val: u.value,
     max: n.value,
     min: 0
@@ -516,7 +516,7 @@ var Me = te({
     }
   },
   setup(e, { slots: n }) {
-    const t = g("config", R(Object.assign({}, p))), u = g("currentSlide", s(0)), i = g("slidesToScroll", s(0)), r = g("isSliding", s(!1)), f = T(() => e.index === u.value), v = T(() => e.index === u.value - 1), c = T(() => e.index === u.value + 1), o = T(() => {
+    const t = g("config", V(Object.assign({}, p))), u = g("currentSlide", s(0)), i = g("slidesToScroll", s(0)), r = g("isSliding", s(!1)), f = A(() => e.index === u.value), v = A(() => e.index === u.value - 1), c = A(() => e.index === u.value + 1), o = A(() => {
       const S = Math.floor(i.value), k = Math.ceil(i.value + t.itemsToShow - 1);
       return e.index >= S && e.index <= k;
     });
@@ -562,7 +562,7 @@ const Ze = { class: "lkt-carousel-page" }, et = { key: 0 }, tt = { key: 0 }, nt 
     itemsToShow: { default: 1 },
     itemsToScroll: { default: 1 },
     autoplay: { default: 0 },
-    wrapAround: { type: Boolean, default: !1 },
+    infinite: { type: Boolean, default: !1 },
     mouseDrag: { type: Boolean, default: !0 },
     touchDrag: { type: Boolean, default: !0 },
     pauseAutoplayOnHover: { type: Boolean, default: !0 },
@@ -582,17 +582,17 @@ const Ze = { class: "lkt-carousel-page" }, et = { key: 0 }, tt = { key: 0 }, nt 
     let r = [];
     const f = s(i.modelValue), v = s(i.page), c = s([]), o = s(r);
     s(!1);
-    const S = s(!1), k = s(null), d = s(i.resource !== ""), y = s(d.value === !0), C = Pe(), A = T(() => {
+    const S = s(!1), k = s(null), d = s(i.resource !== ""), y = s(d.value === !0), C = Pe(), T = A(() => {
       let a = [];
       for (let _ in C) _.indexOf("slide-") !== -1 && a.push(_);
       return a;
-    }), V = (a) => {
-      f.value = 0, Array.isArray(a) && (c.value = a), y.value = !1, S.value = !0, console.log("onResults", c.value, y.value);
+    }), R = (a) => {
+      f.value = 0, Array.isArray(a) && (c.value = a), y.value = !1, S.value = !0;
     }, E = (a) => {
       o.value = a;
     }, H = () => De(() => y.value = !0), Y = () => u("create"), $ = () => {
       k.value.doRefresh();
-    }, W = T(() => o.value.includes("create")), Q = T(() => o.value.includes("read")), I = T(() => o.value.includes("update")), U = T(() => o.value.includes("drop"));
+    }, W = A(() => o.value.includes("create")), Q = A(() => o.value.includes("read")), I = A(() => o.value.includes("update")), U = A(() => o.value.includes("drop"));
     return n({
       doRefresh: $
     }), (a, _) => {
@@ -612,7 +612,7 @@ const Ze = { class: "lkt-carousel-page" }, et = { key: 0 }, tt = { key: 0 }, nt 
           })
         ])) : N("", !0),
         y.value ? (w(), J(X, { key: 3 })) : N("", !0),
-        !d.value && A.value.length > 0 || !y.value && c.value.length > 0 ? (w(), D("div", {
+        !d.value && T.value.length > 0 || !y.value && c.value.length > 0 ? (w(), D("div", {
           key: 4,
           class: $e(["lkt-carousel", a.carouselClass])
         }, [
@@ -622,7 +622,7 @@ const Ze = { class: "lkt-carousel-page" }, et = { key: 0 }, tt = { key: 0 }, nt 
             "items-to-show": a.itemsToShow,
             "items-to-scroll": a.itemsToScroll,
             autoplay: a.autoplay,
-            "wrap-around": a.wrapAround,
+            "wrap-around": a.infinite,
             "mouse-drag": a.mouseDrag,
             "touch-drag": a.touchDrag,
             "pause-autoplay-on-hover": a.pauseAutoplayOnHover,
@@ -634,7 +634,7 @@ const Ze = { class: "lkt-carousel-page" }, et = { key: 0 }, tt = { key: 0 }, nt 
               de(j(Qe))
             ]),
             default: K(() => [
-              (w(!0), D(fe, null, Le(A.value, (x, G) => (w(), J(j(Me), {
+              (w(!0), D(fe, null, Le(T.value, (x, G) => (w(), J(j(Me), {
                 key: x,
                 index: G
               }, {
@@ -688,7 +688,7 @@ const Ze = { class: "lkt-carousel-page" }, et = { key: 0 }, tt = { key: 0 }, nt 
           "onUpdate:modelValue": _[1] || (_[1] = (x) => v.value = x),
           resource: a.resource,
           filters: a.filters,
-          onResults: V,
+          onResults: R,
           onPerms: E,
           onLoading: H
         }, null, 8, ["modelValue", "resource", "filters"])) : N("", !0)

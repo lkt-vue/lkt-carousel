@@ -1,0 +1,22 @@
+.lkt-carousel {
+    font-size: var(--lkt-carousel-font-size);
+}
+
+.lkt-carousel-slide {
+    min-height: var(--lkt-carousel-min-height-slide);
+    width: 100%;
+    background-color: var(--lkt-carousel-bg-slide);
+    color: var(--lkt-carousel-color);
+    padding: var(--lkt-carousel-padding-slide);
+    border-radius: var(--lkt-carousel-border-radius-slide);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__prev,
+.carousel__next {
+    box-sizing: content-box;
+    border: 1px solid white;
+    border-radius: var(--lkt-carousel-border-radius-navigation)
+}
