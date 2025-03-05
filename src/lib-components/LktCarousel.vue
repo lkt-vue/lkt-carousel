@@ -99,19 +99,19 @@ defineExpose({
         <header v-if="title || slots.title">
             <h2 v-if="title">{{ title }}</h2>
             <template v-if="slots.title">
-                <slot name="title"></slot>
+                <slot name="title"/>
             </template>
         </header>
 
         <div class="lkt-carousel-page-buttons" v-if="slots.buttons">
-            <slot name="buttons"></slot>
+            <slot name="buttons"/>
         </div>
 
         <div class="lkt-carousel-page-filters" v-if="firstLoadReady && slots.filters">
-            <slot name="filters" :items="items" :is-loading="loading"></slot>
+            <slot name="filters" :items="items" :is-loading="loading"/>
         </div>
 
-        <lkt-loader v-if="loading"></lkt-loader>
+        <lkt-loader v-if="loading"/>
 
         <div class="lkt-carousel"
              :class="carouselClass"

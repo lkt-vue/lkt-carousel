@@ -1,6 +1,6 @@
 {
   "name": "lkt-carousel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "keywords": [
     "lkt",
@@ -36,6 +36,9 @@
     "build": "rm -rf dist/*; vue-tsc --declaration --emitDeclarationOnly; vite build; tsc --project tsconfig.build.json; cp build/* dist/"
   },
   "author": "Antonio Ibáñez",
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "@babel/types": "^7.23.6",
     "@types/node": "^20.11.19",
@@ -47,10 +50,7 @@
     "vue": "^3.3.0",
     "vue-tsc": "^1.8.27"
   },
-  "engines": {
-    "node": ">=18"
-  },
-  "dependencies": {
+  "peerDependencies": {
     "lkt-control-tools": "^1.0.3",
     "lkt-events": "^1.0.2",
     "lkt-http-client": "^1.0.21",
